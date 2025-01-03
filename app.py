@@ -15,7 +15,7 @@ llm = ChatGroq(
     api_key="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"
 )
 
-st.title("Blood pressure analyser")
+st.title("रक्तचाप विश्लेषक")
 
 # 1) Define your system message template
 system_template = """
@@ -56,9 +56,9 @@ chat_prompt = ChatPromptTemplate.from_messages([system_prompt, human_prompt])
 # Create Streamlit UI
 sys_val = st.number_input("Enter Systolic Blood Pressure (sys)", min_value=0, max_value=300, value=120)
 dia_val = st.number_input("Enter Diastolic Blood Pressure (dia)", min_value=0, max_value=200, value=80)
-pulse_val = st.number_input("Enter Pulse")
+pulse_val = st.number_input("Enter Pulse : ")
 
-if st.button("Analyze"):
+if st.button("विश्लेषण करें"):
     # Suppose 'predictor(sys, dia)' returns a float that represents the 'cardio' score
     result = predictor(sys_val, dia_val)
     
