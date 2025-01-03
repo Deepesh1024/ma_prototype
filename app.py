@@ -15,7 +15,7 @@ llm = ChatGroq(
     api_key="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"
 )
 
-st.title("Blood Pressure Prediction")
+st.title("Blood pressure analyser")
 
 # 1) Define your system message template
 system_template = """
